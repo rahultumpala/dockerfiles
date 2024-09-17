@@ -15,6 +15,9 @@ RUN apt-get install lowdown
 RUN apt-get install -y gnuplot graphviz maelstrom golang-go openjdk-11-jdk
 
 # for hackattic challenges I'm solving using elixir
+ARG hackattic_token
+ENV hackattic_access_token $hackattic_token
 RUN apt-get install -y elixir
+RUN mix local.hex --force
 
 ENTRYPOINT "/bin/bash"
