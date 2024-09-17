@@ -13,3 +13,8 @@ RUN apt-get install lowdown
 
 # for dist-sys challenges
 RUN apt-get install -y gnuplot graphviz maelstrom golang-go openjdk-11-jdk
+
+# for hackattic challenges I'm solving using elixir
+RUN apt-get install -y elixir
+
+ENTRYPOINT "/bin/bash"
