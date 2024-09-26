@@ -21,6 +21,6 @@ RUN apt-get install -y elixir
 RUN mix local.hex --force
 
 # c++ deps
-RUN apt-get install -y openssl libssl-dev libcurl4-openssl-dev --fix-missing
+RUN apt-get install -y openssl libssl-dev libcurl4-openssl-dev curl --fix-missing 
 
 ENTRYPOINT "/bin/bash"
